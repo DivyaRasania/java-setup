@@ -2,7 +2,7 @@
 
 ## How to install
 
-Open PowerShell window (doesn't matter admin or not) and enter `irm bit.ly/cpp-vscode-setup | iex`
+Open PowerShell window (doesn't matter admin or not) and enter `irm bit.ly/java-setup | iex`
 
 #### What will happen when you run this?
 
