@@ -1,4 +1,4 @@
-# Setup Microsoft Visual Studio Code and C++ Compiler(gcc) in Windows 10/11
+# Setup JavaJDK, Microsoft Visual Studio Code, GitHub Desktop in Windows 10/11
 
 ## How to install
 
