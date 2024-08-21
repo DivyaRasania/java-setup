@@ -12,19 +12,19 @@ if (!$principal.IsInRole($adminRole)) {
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
-$answer = Read-Host "Do you want to install JavaJDK? [Y/N]"
+$answer = Read-Host "Do you want to install JavaJDK? [y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
     Write-Host "Installing Microsoft Visual Studio Code..."
     choco install openjdk --force -y
 }
 
-$answer = Read-Host "Do you want to install git? [Y/N]"
+$answer = Read-Host "Do you want to install git? [y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
     Write-Host "Installing Microsoft Visual Studio Code..."
     choco install git --force -y
 }
 
-$answer = Read-Host "Do you want to install Microsoft Visual Studio Code? [Y/N]"
+$answer = Read-Host "Do you want to install Microsoft Visual Studio Code? [y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
     Write-Host "Installing Microsoft Visual Studio Code..."
     choco install vscode --force -y
