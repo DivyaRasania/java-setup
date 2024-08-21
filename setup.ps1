@@ -9,25 +9,25 @@ if (!$principal.IsInRole($adminRole)) {
     break
 }
 
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
 $answer = Read-Host "Do you want to install JavaJDK? [Y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
     Write-Host "Installing Microsoft Visual Studio Code..."
-    choco install openjdk -y
+    choco install openjdk --force -y
+}
+
+$answer = Read-Host "Do you want to install git? [Y/N]"
+if ($answer -eq "Y" -or $answer -eq "y") {
+    Write-Host "Installing Microsoft Visual Studio Code..."
+    choco install git --force -y
 }
 
 $answer = Read-Host "Do you want to install Microsoft Visual Studio Code? [Y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
     Write-Host "Installing Microsoft Visual Studio Code..."
-    choco install vscode -y
-}
-
-$answer = Read-Host "Do you want to install Github Desktop? [Y/N]"
-if ($answer -eq "Y" -or $answer -eq "y") {
-    Write-Host "Installing Microsoft Visual Studio Code..."
-    choco install github-dektop -y
+    choco install vscode --force -y
 }
 
 Start-Process -FilePath "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack"
