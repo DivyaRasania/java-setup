@@ -2,7 +2,7 @@
 
 ## How to install
 
-Open PowerShell window and enter `irm bit.ly/java-vscode-git-setup | iex`
+Open PowerShell(NOT CMD) window and enter `irm bit.ly/java-vscode-git-setup | iex`
 
 #### What will happen when you run this?
 
