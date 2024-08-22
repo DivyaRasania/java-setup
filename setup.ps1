@@ -13,13 +13,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 $answer = Read-Host "Do you want to install JavaJDK? [y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
-    Write-Host "Installing Java JDK Code..."
+    Write-Host "Installing Java JDK..."
     choco install openjdk --force -y
 }
 
 $answer = Read-Host "Do you want to install git? [y/N]"
 if ($answer -eq "Y" -or $answer -eq "y") {
-    Write-Host "Installing Git Code..."
+    Write-Host "Installing Git..."
     choco install git --force -y
 }
 
